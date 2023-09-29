@@ -5,5 +5,5 @@ Code for the paper "Deep Model Predictive Optimization"
 Create a new conda environment with:
 ```
 conda env create -f environment.yml
-conda activate learning_mppi
+conda activate dmpo
 ```
