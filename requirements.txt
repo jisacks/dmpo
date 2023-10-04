@@ -1,0 +1,9 @@
+torch==2.1.0
+pytorch-lightning==2.0.9
+numpy
+tensorboard
+ghalton
+tqdm
+meshcat
+rowan
+numpy-quaternion

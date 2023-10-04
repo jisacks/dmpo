@@ -1,0 +1,55 @@
+rollout:
+  env_type: quadrotor
+  num_envs: 1
+  n_episodes: 1
+  ep_length: 200
+  base_seed: 123
+  break_if_done: False
+  use_condition: True
+  dynamic_env: True
+
+environment:
+  config: ../config/envs/zigzagyaw.yaml
+  action_is_mf: False
+  use_delay_model: True
+  delay_coeff: 0.4
+#  randomize_mass: True
+#  randomize_delay_coeff: True
+#  force_pert: True
+  force_is_z: True
+  mass_range: [0.7, 1.3]
+  delay_range: [0.2, 0.6]
+  force_range: [-3.5, 3.5]
+  use_obs_noise: True
+
+model:
+  config: ../config/envs/zigzagyaw.yaml
+  action_is_mf: False
+  use_delay_model: True
+  delay_coeff: 0.4
+
+cost:
+  alpha_p: 0.05
+  alpha_z: 0.0
+  alpha_w: 0.0
+  alpha_a: 0.0
+  alpha_R: 0.05
+  alpha_v: 0.0
+  alpha_yaw: 0.0
+  alpha_pitch: 0.0
+  alpha_u_delta: 0.0
+  alpha_u_thrust: 0.01
+  alpha_u_omega: 0.01
+
+env_cost:
+  alpha_p: 0.05
+  alpha_z: 0.0
+  alpha_w: 0.0
+  alpha_a: 0.0
+  alpha_R: 0.05
+  alpha_v: 0.0
+  alpha_yaw: 0.0
+  alpha_pitch: 0.0
+  alpha_u_delta: 0.0
+  alpha_u_thrust: 0.01
+  alpha_u_omega: 0.01
